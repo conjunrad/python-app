@@ -27,4 +27,6 @@ jobs:
         uses: docker/build-push-action@v6
         with:
           push: true
-          tags: public.ecr.aws/${{ secrets.AWS_ECR_REPO_ID }}/python-app:${{ github.GITHUB_REF_NAME }}
+          tags: |
+            public.ecr.aws/${{ secrets.AWS_ECR_REPO_ID }}/python-app:latest
+            public.ecr.aws/${{ secrets.AWS_ECR_REPO_ID }}/python-app:${{ github.GITHUB_SHA }}
