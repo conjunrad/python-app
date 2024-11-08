@@ -29,4 +29,4 @@ jobs:
           push: true
           tags: |
             public.ecr.aws/${{ secrets.AWS_ECR_REPO_ID }}/python-app:latest
-            public.ecr.aws/${{ secrets.AWS_ECR_REPO_ID }}/python-app:${{ github.GITHUB_RUN_ID }}
+            public.ecr.aws/${{ secrets.AWS_ECR_REPO_ID }}/python-app:${{ github.RUN_ID }}
